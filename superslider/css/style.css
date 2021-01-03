@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, .2);
+}
+
+
+/*  S L I D E R  */
+
+.slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    border: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.slider-holder {
+    display: block;
+    transition: margin .8s ease-in-out;
+}
+
+.slider-item {
+    display: block;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    float: left;
+    color: white;
+    font-size: 40px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.arrow {
+    border: solid rgba(255, 255, 255, 1);
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    cursor: pointer;
+    padding: 3px;
+    top: 50%;
+}
+
+.next-button {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 1rem;
+}
+
+.prev-button {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 1rem;
+}
+
+.slider-caption {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    padding: 0;
+    margin-bottom: calc(1rem + 40px);
+    color: rgba(255, 255, 255, 1);
+    font-size: .8rem;
+    font-weight: 400;
+    text-shadow: 0 .1rem .2rem rgba(0, 0, 0, 1);
+}
+
+.image-counter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    color:rgba(255, 255, 255, 1);
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, .2);
+    padding: .2rem .5rem;
+}
+
+.slider-footer {
+    position: relative;
+    display: flex;
+}
+
+.slider-dots {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    margin: auto;
+}
+
+.slider-dot {
+    float: left;
+    height: 8px;
+    width: 8px;
+    margin: 16px 4px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-dot:hover {
+    background-color: rgba(0, 0, 0, .5);
+    transform: scale(1.3, 1.3);
+}
+
+.slider-dot_selected {
+    float: left;
+    height: 8px;
+    width: 8px;
+    margin: 16px 4px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    transform: scale(1.3, 1.3);
+}
